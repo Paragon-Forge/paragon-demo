@@ -1,6 +1,6 @@
 {
-    "name": "master_template",
-    "short_name": "master_template",
+    "name": "Paragon",
+    "short_name": "Paragon",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
