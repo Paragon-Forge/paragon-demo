@@ -1,46 +1,280 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paragon — Flutter Super App Template</title>
+<meta name="description" content="Paragon is a production-ready, multi-vertical Flutter app template — e-commerce, ride-hailing, car rentals, social feed, chat, and wallet — with a Node.js backend and admin dashboard. One codebase, runs in 60 seconds, no API keys.">
+<meta property="og:title" content="Paragon — Flutter Super App Template">
+<meta property="og:description" content="One codebase, every vertical: e-commerce, ride-hailing, rentals, social, chat, wallet — plus a Node.js backend and admin dashboard.">
+<meta property="og:image" content="./paragon-cover.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="./favicon.png">
+<style>
+  :root{
+    --bg:#0d0d10; --bg2:#101014; --card:#16161c; --card2:#1b1b22;
+    --line:#26262f; --gold:#e8ce86; --gold2:#c9a85e; --goldhi:#f5e7b8;
+    --tx:#e7e7ee; --muted:#9a9aa6; --muted2:#7a7a86;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font:16px/1.65 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  a{color:var(--gold);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{color:#fff;line-height:1.2;margin:0}
+  .serif{font-family:Georgia,"Times New Roman",serif;letter-spacing:.06em}
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+  /* header */
+  header{position:sticky;top:0;z-index:20;background:rgba(13,13,16,.82);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand img{width:30px;height:30px}
+  .brand b{font-family:Georgia,serif;letter-spacing:.14em;color:var(--gold);
+    font-size:19px;font-weight:700}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{color:var(--muted);font-size:14px}
+  .nav-links a:hover{color:#fff;text-decoration:none}
+  .btn{display:inline-block;border-radius:10px;padding:12px 22px;font-weight:600;
+    font-size:15px;cursor:pointer;border:1px solid transparent;transition:.15s}
+  .btn-gold{background:linear-gradient(180deg,var(--goldhi),var(--gold2));
+    color:#141410}
+  .btn-gold:hover{filter:brightness(1.06);text-decoration:none}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--tx)}
+  .btn-ghost:hover{border-color:var(--gold2);text-decoration:none;color:#fff}
+  .nav .btn{padding:9px 16px;font-size:14px}
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+  /* hero */
+  .hero{position:relative;text-align:center;padding:86px 0 72px;overflow:hidden}
+  .hero::before{content:"";position:absolute;left:50%;top:-120px;
+    width:680px;height:680px;transform:translateX(-50%);
+    background:radial-gradient(circle,rgba(232,206,134,.14),transparent 62%);
+    pointer-events:none}
+  .hero img.dia{width:104px;height:104px;position:relative}
+  .hero h1{font-size:46px;margin:22px 0 0}
+  .hero .sub{color:var(--muted);font-size:20px;max-width:720px;margin:18px auto 0}
+  .hero .verts{color:var(--gold);font-size:15px;letter-spacing:.02em;margin-top:14px}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .price-flag{margin-top:20px;color:var(--muted);font-size:15px}
+  .price-flag b{color:#fff}
+  .strike{color:var(--muted2);text-decoration:line-through;margin-right:6px}
+  .trust{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+  .chip{border:1px solid var(--line);background:var(--card);border-radius:999px;
+    padding:7px 15px;font-size:13px;color:#cfc9b8}
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
+  /* sections */
+  section{padding:66px 0;border-top:1px solid var(--line)}
+  .eyebrow{color:var(--gold2);font-size:13px;letter-spacing:.16em;
+    text-transform:uppercase;font-weight:700}
+  .sec-h{font-size:32px;margin:10px 0 8px}
+  .sec-p{color:var(--muted);max-width:680px;font-size:17px}
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px}
+  .feat .ic{font-size:24px}
+  .feat h3{font-size:17px;margin:12px 0 6px}
+  .feat p{color:var(--muted);font-size:14.5px;margin:0}
 
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Paragon">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  .two{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start}
+  .inc{list-style:none;padding:0;margin:22px 0 0}
+  .inc li{padding:9px 0 9px 30px;position:relative;color:#d7d7de;border-bottom:1px solid var(--line)}
+  .inc li::before{content:"◆";position:absolute;left:0;color:var(--gold);font-size:12px;top:12px}
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  /* pricing */
+  .pricecard{background:linear-gradient(180deg,var(--card2),var(--card));
+    border:1px solid #33323c;border-radius:20px;padding:34px;max-width:440px;
+    margin:36px auto 0;text-align:center;
+    box-shadow:0 24px 60px -30px rgba(232,206,134,.35)}
+  .pricecard .amt{font-size:52px;color:#fff;font-family:Georgia,serif;font-weight:700}
+  .pricecard .amt small{font-size:20px;color:var(--muted);font-weight:400}
+  .pricecard .was{color:var(--muted2);text-decoration:line-through;font-size:20px}
+  .pricecard .promo{margin:10px 0 0;color:var(--gold);font-size:15px}
+  .pricecard .promo code{background:#241f12;border:1px solid var(--gold2);
+    border-radius:6px;padding:2px 8px;color:var(--goldhi);font-weight:700;letter-spacing:.06em}
+  .pricecard ul{list-style:none;padding:0;margin:22px 0;text-align:left}
+  .pricecard li{padding:7px 0 7px 26px;position:relative;color:#d7d7de;font-size:15px}
+  .pricecard li::before{content:"✓";position:absolute;left:0;color:var(--gold)}
+  .pricecard .btn-gold{width:100%;padding:15px;font-size:17px;margin-top:6px}
+  .guarantee{color:var(--muted2);font-size:13px;margin-top:14px}
 
-  <title>Paragon — Flutter App Template</title>
-  <link rel="manifest" href="manifest.json">
+  /* faq */
+  .faq{margin-top:30px}
+  .qa{border-bottom:1px solid var(--line);padding:20px 0}
+  .qa h3{font-size:17px;margin-bottom:8px}
+  .qa p{color:var(--muted);margin:0;font-size:15.5px}
+
+  /* support + footer */
+  .support{text-align:center}
+  .support a.mail{font-size:20px;font-weight:600}
+  footer{border-top:1px solid var(--line);padding:40px 0 60px;color:var(--muted2)}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;align-items:center}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap}
+  .foot-links a{color:var(--muted)}
+  .foot-brand{display:flex;align-items:center;gap:9px}
+  .foot-brand img{width:22px;height:22px}
+  .foot-brand b{font-family:Georgia,serif;letter-spacing:.12em;color:var(--gold)}
+
+  @media(max-width:820px){
+    .nav-links{display:none}
+    .grid{grid-template-columns:1fr 1fr}
+    .two{grid-template-columns:1fr;gap:28px}
+    .hero h1{font-size:34px}.hero .sub{font-size:17px}
+    .sec-h{font-size:26px}
+  }
+  @media(max-width:520px){ .grid{grid-template-columns:1fr} }
+</style>
 </head>
 <body>
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
 
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
-  <script src="flutter_bootstrap.js" async></script>
+<header>
+  <div class="wrap nav">
+    <div class="brand"><img src="./paragon-diamond.png" alt="Paragon logo"><b>PARAGON</b></div>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#included">What's included</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="./app/" target="_blank" rel="noopener">Live demo</a>
+      <a class="btn btn-gold" href="#pricing">Buy — $69</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <img class="dia" src="./paragon-diamond.png" alt="Paragon diamond">
+    <h1 class="serif">PARAGON</h1>
+    <p class="sub">A production-ready <b>Flutter super-app template</b> — every vertical a commercial app needs, in one clean, documented codebase.</p>
+    <div class="verts">E-commerce · Ride-hailing · Car Rentals · Social Feed · Chat · Wallet</div>
+    <div class="cta">
+      <a class="btn btn-gold" href="#pricing">Buy now — $69</a>
+      <a class="btn btn-ghost" href="./app/" target="_blank" rel="noopener">Try the live demo →</a>
+    </div>
+    <div class="price-flag"><span class="strike">$69</span> <b>$59</b> launch price with code <b>LAUNCH10</b> · one-time payment · free future updates</div>
+    <div class="trust">
+      <span class="chip">Android + iOS</span>
+      <span class="chip">Node.js backend included</span>
+      <span class="chip">Admin dashboard (CRM)</span>
+      <span class="chip">4 languages + RTL</span>
+      <span class="chip">Runs with zero API keys</span>
+    </div>
+  </div>
+</div>
+
+<section id="features">
+  <div class="wrap">
+    <div class="eyebrow">What's inside</div>
+    <h2 class="sec-h">Ten apps' worth of screens, one template</h2>
+    <p class="sec-p">Every feature works out of the box against built-in demo services — no Firebase, no API keys, no configuration. Connect your real services at clearly marked swap points, one file at a time.</p>
+    <div class="grid">
+      <div class="feat"><div class="ic">🛍️</div><h3>Marketplace</h3><p>Catalog, search, favorites, cart, checkout with map-picked address, COD / card / QR / wallet, order tracking timeline and courier map.</p></div>
+      <div class="feat"><div class="ic">🚕</div><h3>Ride-hailing</h3><p>Map pickup &amp; destination, vehicle tiers with distance-based fares, driver matching, two-phase ride tracking, post-ride rating.</p></div>
+      <div class="feat"><div class="ic">🚗</div><h3>P2P Car Rentals</h3><p>Fleet list, pickup/return dates, booking requests, ID + license upload, host approval dashboard, pay-after-approval.</p></div>
+      <div class="feat"><div class="ic">📱</div><h3>Social Feed + Stories</h3><p>Posts with likes and comments, create-post with camera/gallery, stories with progress bars and tap navigation.</p></div>
+      <div class="feat"><div class="ic">💬</div><h3>Chat</h3><p>Conversation list, message bubbles, group threads — ready to wire to your real-time backend.</p></div>
+      <div class="feat"><div class="ic">💳</div><h3>Wallet &amp; Payments</h3><p>Balance, top-ups, transaction history, pay-with-wallet, and a simulated card gateway with the integration point marked.</p></div>
+      <div class="feat"><div class="ic">🗺️</div><h3>Maps, no API key</h3><p>OpenStreetMap location picker with address search — works immediately, swap tiles/geocoder when you scale.</p></div>
+      <div class="feat"><div class="ic">🔐</div><h3>Auth &amp; Security</h3><p>Email/OTP login, biometric lock, social sign-in buttons, change password, account deletion, saved addresses &amp; cards.</p></div>
+      <div class="feat"><div class="ic">🖥️</div><h3>Admin dashboard</h3><p>A separate web CRM: users, products, orders, activity logs, and platform settings — backed by the included Node.js server.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="included">
+  <div class="wrap two">
+    <div>
+      <div class="eyebrow">Foundation quality</div>
+      <h2 class="sec-h">Built to ship, not just to demo</h2>
+      <p class="sec-p">Consistent feature-folder architecture, automated tests, and a buyer guide that maps every screen — so you can rebrand in minutes and extend with confidence.</p>
+      <ul class="inc">
+        <li>Full Flutter source — Android, iOS, and Web targets</li>
+        <li>Node.js + Express reference backend (JWT auth, catalog, orders)</li>
+        <li>Web admin dashboard (CRM) source included</li>
+        <li>4 languages — English, Malay, Indonesian, Arabic — with full RTL</li>
+        <li>5 brand theme presets; light + dark from one seed color</li>
+        <li>Automated tests, zero analyzer warnings</li>
+        <li>iOS build verified via CI (min iOS 15.5, permissions pre-configured)</li>
+        <li>Buyer guide: setup, rebranding checklist, integration notes</li>
+      </ul>
+    </div>
+    <div>
+      <div class="eyebrow">Tech stack</div>
+      <h2 class="sec-h">Modern &amp; familiar</h2>
+      <ul class="inc">
+        <li>Flutter 3.x · Dart</li>
+        <li>GetX — routing, state, dependency injection</li>
+        <li>Dio — networking</li>
+        <li>flutter_map — OpenStreetMap</li>
+        <li>fl_chart · mobile_scanner · local_auth</li>
+        <li>Node.js + Express (reference backend)</li>
+      </ul>
+      <p class="sec-p" style="margin-top:20px">Rebrand fast: app name in one constant, brand color in one line, launcher icons in one command, all copy in one translations file.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow">Pricing</div>
+    <h2 class="sec-h">One-time purchase. Unlimited apps.</h2>
+    <p class="sec-p" style="margin:8px auto 0">Build and ship unlimited apps for yourself or your clients. No subscription, no per-app fee. Free future updates.</p>
+    <div class="pricecard">
+      <div class="was">$69</div>
+      <div class="amt">$59<small> USD</small></div>
+      <div class="promo">Launch price with code <code>LAUNCH10</code></div>
+      <ul>
+        <li>Complete Flutter source code (Android, iOS, Web)</li>
+        <li>Node.js backend + web admin dashboard</li>
+        <li>Buyer guide &amp; integration docs</li>
+        <li>Unlimited apps — personal &amp; client work</li>
+        <li>Free future updates, forever</li>
+      </ul>
+      <a class="btn btn-gold" href="#pricing">Get Paragon now</a>
+      <div class="guarantee">Secure checkout via Creem · instant download</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="eyebrow">Questions</div>
+    <h2 class="sec-h">FAQ</h2>
+    <div class="faq">
+      <div class="qa"><h3>Does it need Firebase or API keys?</h3><p>No. Everything runs on built-in demo services. Integration points for Firebase/FCM, payment gateways, and map providers are documented for when you need them.</p></div>
+      <div class="qa"><h3>What license do I get?</h3><p>A one-time purchase lets you build and ship unlimited apps for yourself, your company, or your clients, and rebrand freely. You may not resell the template's source code itself. Full terms ship in the download and are linked below.</p></div>
+      <div class="qa"><h3>Can I use just one vertical, e.g. only the ride-hailing flow?</h3><p>Yes — every feature is a self-contained folder. Delete what you don't need.</p></div>
+      <div class="qa"><h3>Is the backend production-ready?</h3><p>It's a reference implementation (JSON-file storage) designed to be swapped to Postgres/MongoDB — the routes and contracts are the ones the app already uses.</p></div>
+      <div class="qa"><h3>Do I get updates?</h3><p>Yes. Buy once and get every future version — new features, fixes, and dependency updates — at no extra cost.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="support" id="support">
+  <div class="wrap">
+    <div class="eyebrow">Support</div>
+    <h2 class="sec-h">Questions before buying? Get in touch.</h2>
+    <p class="sec-p" style="margin:8px auto 18px">We answer setup and product questions on a best-effort basis.</p>
+    <a class="mail" href="mailto:azizi@newheart.com.my">azizi@newheart.com.my</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-brand"><img src="./paragon-diamond.png" alt=""><b>PARAGON</b></div>
+    <div class="foot-links">
+      <a href="./app/" target="_blank" rel="noopener">Live demo</a>
+      <a href="mailto:azizi@newheart.com.my">Support: azizi@newheart.com.my</a>
+      <a href="./privacy.html">Privacy Policy</a>
+      <a href="./terms.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;font-size:13px">© 2026 Paragon Framework. All rights reserved.</div>
+</footer>
+
 </body>
 </html>
