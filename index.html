@@ -140,10 +140,13 @@
   .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
   .list{list-style:none;padding:0;margin:24px 0 0}
   .list li{padding:10px 0 10px 32px;position:relative;color:var(--ink2);font-size:15.5px}
-  .list li::before{content:"";position:absolute;left:0;top:15px;width:18px;height:18px;
-    border-radius:50%;background:linear-gradient(135deg,var(--indigo),var(--violet))}
-  .list li::after{content:"✓";position:absolute;left:4px;top:9px;color:#fff;
-    font-size:11px;font-weight:900}
+  /* One element is both the circle and the tick, flex-centered so the check
+     is always dead-centre — not two pieces with hand-tuned offsets. */
+  .list li::before{content:"✓";position:absolute;left:0;top:12px;
+    width:20px;height:20px;border-radius:50%;
+    background:linear-gradient(135deg,var(--indigo),var(--violet));
+    color:#fff;font-size:12px;font-weight:900;line-height:1;
+    display:flex;align-items:center;justify-content:center}
   .stack{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
   .tech{border-radius:10px;padding:8px 15px;font-size:14px;font-weight:650;
     background:#fff;border:1px solid var(--line);color:var(--ink2)}
@@ -246,7 +249,8 @@
       · one-time payment · free updates forever</p>
     <div class="chips">
       <span class="chip">🎨 4 home layouts</span>
-      <span class="chip">🌍 4 languages + RTL</span>
+      <span class="chip">🌍 7 languages + RTL</span>
+      <span class="chip">💱 Any currency</span>
       <span class="chip">🖥️ Admin dashboard</span>
       <span class="chip">⚡ Node.js backend</span>
       <span class="chip">🔑 No API keys needed</span>
@@ -395,7 +399,7 @@
         that maps every screen — so you can extend it with confidence.</p>
       <ul class="list">
         <li>Full Flutter source — Android, iOS and Web targets</li>
-        <li>4 languages (English, Malay, Indonesian, Arabic) with full RTL</li>
+        <li>7 languages (English, Malay, Indonesian, Arabic, Japanese, Korean, Chinese) with full RTL</li>
         <li>5 brand theme presets; light + dark from one seed colour</li>
         <li>Automated tests, zero analyzer warnings</li>
         <li>iOS build verified via CI (min iOS 15.5, permissions pre-configured)</li>
