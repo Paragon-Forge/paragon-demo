@@ -400,6 +400,7 @@
         that maps every screen — so you can extend it with confidence.</p>
       <ul class="list">
         <li>Full Flutter source — Android, iOS and Web targets</li>
+        <li>Modular features: each declares its own routes and dependencies</li>
         <li>7 languages (English, Malay, Indonesian, Arabic, Japanese, Korean, Chinese) with full RTL</li>
         <li>5 brand theme presets; light + dark from one seed colour</li>
         <li>Automated tests, zero analyzer warnings</li>
@@ -484,7 +485,9 @@
           or your clients, and rebrand freely. You may not resell the template's source code
           itself. Full terms ship in the download and are linked below.</p></div>
       <div class="qa"><h3>Can I use just one vertical, e.g. only ride-hailing?</h3>
-        <p>Yes — every feature is a self-contained folder. Delete what you don't need.</p></div>
+        <p>Yes — every feature is a self-contained folder, and features declare their own
+          routes and dependencies in that folder rather than in a central list. Delete what
+          you don't need.</p></div>
       <div class="qa"><h3>Is the backend production-ready?</h3>
         <p>It's a reference implementation (JSON-file storage) designed to be swapped to
           Postgres or MongoDB — the routes and contracts are the ones the app already uses.</p></div>
