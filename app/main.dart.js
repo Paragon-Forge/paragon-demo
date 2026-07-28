@@ -120996,7 +120996,7 @@ A.aHP.prototype={
 $0(){},
 $S:0}
 A.aHQ.prototype={
-$0(){return A.bzv("Paragon","1.5.0",this.a)},
+$0(){return A.bzv("Paragon","1.5.1",this.a)},
 $S:0}
 A.aHR.prototype={
 $0(){return A.bJ($.K(),"/change-password",null,!0,t.z)},
@@ -131463,7 +131463,7 @@ B.a9B=new A.M(!0,B.r,null,".AppleSystemUIFont",null,null,null,null,null,null,nul
 B.a6I=new A.M(!0,B.r,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.m,null,null,null,"blackRedwoodCity labelSmall",null,null,null,null)
 B.aaH=new A.ft(B.a8u,B.a7q,B.a8v,B.a8X,B.a76,B.a7e,B.a7J,B.a8S,B.a7V,B.a9j,B.a6B,B.a6T,B.a9g,B.a9B,B.a6I)
 B.aaI=new A.iL("Google",null,null,null,null,null,null,null,null,null)
-B.aaL=new A.iL("Paragon v1.5.0",null,null,null,null,null,null,null,null,null)
+B.aaL=new A.iL("Paragon v1.5.1",null,null,null,null,null,null,null,null,null)
 B.aaM=new A.iL("flutter_map | \xa9 ",null,null,null,null,null,null,null,null,null)
 B.aaN=new A.iL("Apple",null,null,null,null,null,null,null,null,null)
 B.aaO=new A.MN(0,"system")
