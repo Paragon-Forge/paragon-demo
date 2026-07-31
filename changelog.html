@@ -102,8 +102,23 @@
     <div class="rel">
       <span class="dot"></span>
       <div class="rel-head">
-        <span class="ver">v1.6</span>
+        <span class="ver">v1.6.1</span>
         <span class="tag">Latest</span>
+        <span class="date">31 July 2026</span>
+      </div>
+      <div class="title">CI included, platform hardening</div>
+      <ul>
+        <li><span class="k">A working CI pipeline ships with the template</span> — every push checks the app (analyze, tests, Android build), the admin dashboard, and the backend. No setup needed.</li>
+        <li><span class="k">Release signing documented</span> — creating a keystore, wiring <code>key.properties</code>, and signing on iOS.</li>
+        <li><span class="k">Fixed:</span> Android backups swept up the stored session token and saved cards. Backup and data-extraction rules now exclude them.</li>
+        <li><span class="k">Fixed:</span> a missing iOS photo-library permission string that would crash any feature saving an image.</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <span class="dot"></span>
+      <div class="rel-head">
+        <span class="ver">v1.6</span>
         <span class="date">28 July 2026</span>
       </div>
       <div class="title">Remove what you don't ship</div>
