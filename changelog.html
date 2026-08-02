@@ -102,8 +102,22 @@
     <div class="rel">
       <span class="dot"></span>
       <div class="rel-head">
-        <span class="ver">v1.6.1</span>
+        <span class="ver">v1.7</span>
         <span class="tag">Latest</span>
+        <span class="date">1 August 2026</span>
+      </div>
+      <div class="title">Environments &amp; smarter skeletons</div>
+      <ul>
+        <li><span class="k">Dev, staging and production builds</span> — <code>--dart-define=ENV=dev</code> switches the API URL and badges the app title, so testers can tell builds apart. <code>flutter run</code> still works with no flags.</li>
+        <li><span class="k">Skeleton loaders derive from your real layouts</span> — no more hand-drawn placeholder screens that fall out of step when you change a card.</li>
+        <li>A mistyped environment falls back to production on purpose, so a release pipeline can't quietly ship a build pointed at a dev backend.</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <span class="dot"></span>
+      <div class="rel-head">
+        <span class="ver">v1.6.1</span>
         <span class="date">31 July 2026</span>
       </div>
       <div class="title">CI included, platform hardening</div>
