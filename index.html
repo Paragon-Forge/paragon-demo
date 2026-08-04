@@ -67,6 +67,11 @@
   .nav-links a{color:var(--body);font-size:15px;font-weight:550}
   .nav-links a:hover{color:var(--indigo)}
   .nav .btn{padding:10px 20px;font-size:15px}
+  /* `.nav-links a` (class+element) outranks `.btn-primary` (class), so the
+     nav's Get Paragon button inherited the grey link colour instead of white.
+     These match that specificity to win it back. */
+  .nav-links a.btn-primary,
+  .nav-links a.btn-primary:hover{color:#fff}
 
   /* hero */
   .hero{position:relative;overflow:hidden;padding:76px 0 0;
