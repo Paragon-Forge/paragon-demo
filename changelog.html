@@ -102,8 +102,24 @@
     <div class="rel">
       <span class="dot"></span>
       <div class="rel-head">
-        <span class="ver">v1.7</span>
+        <span class="ver">v1.8</span>
         <span class="tag">Latest</span>
+        <span class="date">5 August 2026</span>
+      </div>
+      <div class="title">Delete a feature, and it's really gone</div>
+      <ul>
+        <li><span class="k">Six more features are now modules</span> — chat, ride, membership, insights, news and the entire marketplace. Removing the marketplace takes 8 routes with it, across cart, checkout, favourites, items and orders.</li>
+        <li><span class="k">The home screen follows</span> — home layouts that depend on a removed feature disappear too, instead of leaving an option that opens nothing.</li>
+        <li><span class="k">Features degrade gracefully</span> — checkout hides the wallet payment option entirely when the wallet module isn't there, rather than offering a payment method that can't work.</li>
+        <li><span class="k">An architecture test ships with the template</span> — it fails if one feature quietly reaches into another module without declaring it, so the boundaries stay real as you build on top.</li>
+        <li><span class="k">Fixed:</span> the mock payment sheet sat inside the checkout folder, so membership, rentals and wallet secretly depended on the marketplace. Removing the marketplace would have broken an app that never used it. It now lives in <code>shared/</code>.</li>
+      </ul>
+    </div>
+
+    <div class="rel">
+      <span class="dot"></span>
+      <div class="rel-head">
+        <span class="ver">v1.7</span>
         <span class="date">1 August 2026</span>
       </div>
       <div class="title">Environments &amp; smarter skeletons</div>
