@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# The compiled demo builds are not useful to a search engine and waste crawl
+# budget on multi-MB JS bundles.
+Disallow: /app/
+Disallow: /admin/
+
+Sitemap: https://paragonframework.com/sitemap.xml
