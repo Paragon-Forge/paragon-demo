@@ -39,7 +39,8 @@
     font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     -webkit-font-smoothing:antialiased;}
   a{text-decoration:none;color:var(--indigo)}
-  img{max-width:100%;display:block}
+  img{max-width:100%;height:auto;display:block}
+  picture{display:block}
   h1,h2,h3,h4{color:var(--ink);line-height:1.15;margin:0;letter-spacing:-.02em}
   .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
   .grad-text{background:linear-gradient(100deg,var(--indigo),var(--violet) 40%,var(--cyan));
@@ -242,7 +243,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top"><img src="./paragon-diamond.png" alt="Paragon"><b>Paragon</b></a>
+    <a class="brand" href="#top"><picture><source type="image/webp" srcset="./paragon-diamond-64.webp"><img src="./paragon-diamond-64.png" width="64" height="56" decoding="async" alt="Paragon"></picture><b>Paragon</b></a>
     <nav class="nav-links">
       <a href="#features">Features</a>
       <a href="#layouts">Home layouts</a>
@@ -279,10 +280,10 @@
     </div>
 
     <div class="phones">
-      <div class="phone"><img src="./shots/multi.png" alt="All-in-one home screen"><div class="cap cap-multi">All-in-one</div></div>
-      <div class="phone"><img src="./shots/ride.png" alt="Ride-hailing home screen"><div class="cap cap-ride">Ride-hailing</div></div>
-      <div class="phone"><img src="./shots/shop.png" alt="Shopping home screen"><div class="cap cap-shop">Shopping</div></div>
-      <div class="phone"><img src="./shots/social.png" alt="Social home screen"><div class="cap cap-social">Social</div></div>
+      <div class="phone"><picture><source type="image/webp" srcset="./shots/multi.webp"><img src="./shots/multi.png" width="440" height="952" decoding="async" alt="All-in-one home screen"></picture><div class="cap cap-multi">All-in-one</div></div>
+      <div class="phone"><picture><source type="image/webp" srcset="./shots/ride.webp"><img src="./shots/ride.png" width="440" height="952" decoding="async" alt="Ride-hailing home screen"></picture><div class="cap cap-ride">Ride-hailing</div></div>
+      <div class="phone"><picture><source type="image/webp" srcset="./shots/shop.webp"><img src="./shots/shop.png" width="440" height="952" decoding="async" alt="Shopping home screen"></picture><div class="cap cap-shop">Shopping</div></div>
+      <div class="phone"><picture><source type="image/webp" srcset="./shots/social.webp"><img src="./shots/social.png" width="440" height="952" decoding="async" alt="Social home screen"></picture><div class="cap cap-social">Social</div></div>
     </div>
   </div>
 </div>
@@ -340,25 +341,25 @@
     </div>
     <div class="lay">
       <div class="lay-item">
-        <img src="./shots/multi.png" alt="All-in-one home layout">
+        <picture><source type="image/webp" srcset="./shots/multi.webp"><img src="./shots/multi.png" width="440" height="952" loading="lazy" decoding="async" alt="All-in-one home layout"></picture>
         <span class="pill cap-multi">All-in-one</span>
         <h4>Super-app dashboard</h4>
         <p>Gradient header, wallet balance, service grid, promos and trending products.</p>
       </div>
       <div class="lay-item">
-        <img src="./shots/ride.png" alt="Ride-hailing home layout">
+        <picture><source type="image/webp" srcset="./shots/ride.webp"><img src="./shots/ride.png" width="440" height="952" loading="lazy" decoding="async" alt="Ride-hailing home layout"></picture>
         <span class="pill cap-ride">Ride-hailing</span>
         <h4>Map-first booking</h4>
         <p>Live map, "where to?" search, saved places and vehicle tiers with fares.</p>
       </div>
       <div class="lay-item">
-        <img src="./shots/shop.png" alt="Shopping home layout">
+        <picture><source type="image/webp" srcset="./shots/shop.webp"><img src="./shots/shop.png" width="440" height="952" loading="lazy" decoding="async" alt="Shopping home layout"></picture>
         <span class="pill cap-shop">Shopping</span>
         <h4>Storefront</h4>
         <p>Search bar, categories, flash-sale banner, deals carousel and product grid.</p>
       </div>
       <div class="lay-item">
-        <img src="./shots/social.png" alt="Social home layout">
+        <picture><source type="image/webp" srcset="./shots/social.webp"><img src="./shots/social.png" width="440" height="952" loading="lazy" decoding="async" alt="Social home layout"></picture>
         <span class="pill cap-social">Social</span>
         <h4>Community feed</h4>
         <p>Stories row, post composer, suggested people and the latest posts.</p>
@@ -404,9 +405,9 @@
     </div>
   </div>
   <div class="wrap" style="margin-top:52px">
-    <img src="./shots/crm.png" alt="Paragon Admin Panel showing revenue, orders and product analytics"
+    <picture><source type="image/webp" srcset="./shots/crm.webp"><img src="./shots/crm.png" width="1100" height="687" loading="lazy" decoding="async" alt="Paragon Admin Panel showing revenue, orders and product analytics"
       style="border-radius:16px;border:1px solid rgba(255,255,255,.14);
-             box-shadow:0 40px 80px -30px rgba(0,0,0,.85)">
+             box-shadow:0 40px 80px -30px rgba(0,0,0,.85)"></picture>
     <p style="text-align:center;margin-top:16px;font-size:14px;color:#94a3b8">
       The included Admin Panel — this is the live demo, not a mockup.</p>
   </div>
@@ -432,9 +433,9 @@
       </ul>
     </div>
     <div>
-      <img src="./shots/multi.png" alt="Paragon running on a phone"
+      <picture><source type="image/webp" srcset="./shots/multi.webp"><img src="./shots/multi.png" width="440" height="952" loading="lazy" decoding="async" alt="Paragon running on a phone"
         style="border-radius:20px;border:1px solid var(--line);max-width:330px;margin:0 auto;
-               box-shadow:0 30px 60px -24px rgba(15,23,42,.35)">
+               box-shadow:0 30px 60px -24px rgba(15,23,42,.35)"></picture>
     </div>
   </div>
 </section>
@@ -537,7 +538,7 @@
 <footer>
   <div class="wrap">
     <div class="f-top">
-      <div class="f-brand"><img src="./paragon-diamond.png" alt=""><b>Paragon</b></div>
+      <div class="f-brand"><picture><source type="image/webp" srcset="./paragon-diamond-64.webp"><img src="./paragon-diamond-64.png" width="64" height="56" decoding="async" alt=""></picture><b>Paragon</b></div>
       <div class="f-links">
         <a href="./app/" target="_blank" rel="noopener">Live demo</a>
         <a href="./admin/" target="_blank" rel="noopener">Live Admin Panel</a>
