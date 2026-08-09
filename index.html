@@ -207,7 +207,10 @@
   /* support */
   .support-box{background:linear-gradient(135deg,#eef2ff,#ecfeff);
     border:1px solid #c7d2fe;border-radius:22px;padding:48px 32px;text-align:center}
-  .mail{display:inline-block;margin-top:14px;font-size:21px;font-weight:750;color:var(--indigo)}
+  /* max-width + overflow-wrap so a long address can never paint outside the
+     card; the font-size below keeps it on one line on a phone instead. */
+  .mail{display:inline-block;margin-top:14px;font-size:21px;font-weight:750;
+    color:var(--indigo);max-width:100%;overflow-wrap:anywhere}
 
   /* footer */
   footer{background:var(--ink);color:#94a3b8;padding:52px 0 40px}
@@ -236,6 +239,10 @@
     h1.title{font-size:34px}.lead{font-size:17px}
     .phone{width:calc(50% - 12px)}
     section{padding:60px 0}
+    /* 32px of side padding on a 375px screen left the address no room. */
+    .support-box{padding:36px 20px}
+    .mail{font-size:16px}
+    .f-links{gap:14px 18px}
   }
 </style>
 </head>
