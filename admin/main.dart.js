@@ -101165,7 +101165,7 @@ s=this.e
 s.ad$=r
 s.M$=0
 this.aF()},
-I(a){var s=this,r=null,q=u.x,p=A.iB(B.Jw,A.P(a).ax.b,r,56),o=A.bi("Admin Dashboard",r,r,r,A.P(a).ok.f,B.bw,r),n=A.fM(s.d,B.KY,r,1,!1,r,r),m=A.fM(s.e,B.KO,r,1,!0,r,new A.aAv(s)),l=s.f,k=l?r:s.gak_()
+I(a){var s=this,r=null,q=u.x,p=A.iB(B.Jw,A.P(a).ax.b,r,56),o=A.bi("Admin Panel",r,r,r,A.P(a).ok.f,B.bw,r),n=A.fM(s.d,B.KY,r,1,!1,r,r),m=A.fM(s.e,B.KO,r,1,!0,r,new A.aAv(s)),l=s.f,k=l?r:s.gak_()
 k=A.wl(l?B.Vq:B.a0o,k)
 if(B.c.q(q,"localhost"))l="Requires the reference backend: npm start in server/"
 else{l=A.ia(q,0,r)
