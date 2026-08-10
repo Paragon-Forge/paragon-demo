@@ -100952,7 +100952,7 @@ p=p.as
 p===$&&A.a()
 p=p.gn(0)?B.C9:B.a0q
 r=t.z
-return new A.ry("/login","Admin Dashboard",o,s,p,!1,A.b([A.aKO(q,q,q,B.ql,B.qn,B.L,q,!1,q,!0,q,"/login",!0,new A.a7G(),q,q,q,!0,!0,q,q,q,q,r),A.aKO(q,q,q,B.ql,B.qn,B.L,q,!1,q,!0,q,"/shell",!0,new A.a7H(),q,q,q,!0,!0,q,q,q,q,r)],t.RT),q)},
+return new A.ry("/login","Admin Panel",o,s,p,!1,A.b([A.aKO(q,q,q,B.ql,B.qn,B.L,q,!1,q,!0,q,"/login",!0,new A.a7G(),q,q,q,!0,!0,q,q,q,q,r),A.aKO(q,q,q,B.ql,B.qn,B.L,q,!1,q,!0,q,"/shell",!0,new A.a7H(),q,q,q,!0,!0,q,q,q,q,r)],t.RT),q)},
 $S:631}
 A.a7G.prototype={
 $0(){return B.PA},
