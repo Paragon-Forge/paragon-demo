@@ -111424,7 +111424,7 @@ return this.a.j(0,b.a)&&this.b.j(0,b.b)},
 gB(a){return A.V(this.a,this.b,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a)}}
 A.a2j.prototype={
 C(a){var s=null,r=A.l(a)
-return A.ct(!0,new A.de(B.hj,s,s,A.uN(A.hI(s,new A.ag(B.Q7,A.aZ(A.b([B.aaI,A.kg(B.aaH,B.aC,s,s,s,s)],t.p),B.l,B.j,B.ah,0,s),s),B.V,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!1,B.bf),r.ax.k2,!0),s),!0,!1,B.A,!0,!0)}}
+return A.ct(!0,new A.de(B.hj,s,s,A.uN(A.hI(s,new A.ag(B.Q7,A.aZ(A.b([B.aaJ,A.kg(B.aaH,B.aC,s,s,s,s)],t.p),B.l,B.j,B.ah,0,s),s),B.V,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!1,B.bf),r.ax.k2,!0),s),!0,!1,B.A,!0,!0)}}
 A.p6.prototype={}
 A.ru.prototype={
 Z(){return new A.a9c()}}
@@ -116926,7 +116926,7 @@ q.push(new A.aO(new A.auQ(n),m))
 q.push(B.b9)
 q.push(A.aZ(A.b([B.ue,new A.ag(B.hN,A.n(A.q("login_or"),m,m,m,A.l(a).ok.Q,m,m,m),m),B.ue],r),B.l,B.j,B.k,0,m))
 q.push(B.Z)
-q.push(A.aZ(A.b([A.bl(A.a_D(B.To,B.aaF,new A.auR(n),m),1),B.aF,A.bl(A.a_D(B.SM,B.aaJ,new A.auS(n),m),1)],r),B.l,B.j,B.k,0,m))
+q.push(A.aZ(A.b([A.bl(A.a_D(B.To,B.aaF,new A.auR(n),m),1),B.aF,A.bl(A.a_D(B.SM,B.aaK,new A.auS(n),m),1)],r),B.l,B.j,B.k,0,m))
 q.push(B.Z)
 q.push(A.aZ(A.b([A.n(A.q("login_no_account"),m,m,m,m,m,m,m),A.f_(A.n(A.q("signup_button"),m,m,m,m,m,m,m),new A.auT(),m)],r),B.l,B.aE,B.k,0,m))
 return A.cM(m,m,A.ct(!0,A.l5(A.r1(m,A.ay(q,B.aD,B.j,B.k,0,B.n),l),B.by,m,B.N),!0,!1,B.A,!0,!0),m,m,m,m)}}
@@ -120791,7 +120791,7 @@ azV(){var s,r,q=null,p=$.K(),o=A.n(A.q("settings_language"),q,q,q,q,q,q,q),n=t.p
 for(s=B.ig.ghP(),s=s.gaa(s);s.u();){r=s.gM()
 m.push(new A.a2l(new A.aI7(this,r),A.aZ(A.b([new A.jX(1,B.cq,A.n(r.b.b,q,q,q,q,q,q,q),q),new A.aO(new A.aI8(this,r),q)],n),B.l,B.j,B.k,0,q),q))}A.mV(p,A.aJ1(m,B.nm,o),t.z)},
 C(a){var s=this,r=null,q=t.p
-return A.cM(A.d9(r,r,r,!0,!0,r,r,1,r,r,r,!1,r,!1,r,r,r,r,!0,r,r,r,r,r,A.n(A.q("settings_title"),r,r,r,r,r,r,r),r,r,r,1,r,!0),r,A.eU(A.b([A.cu(A.ay(A.b([new A.aO(new A.aIb(s),r),B.aP,A.c6(!1,r,r,r,!0,r,r,r,!0,r,B.Ti,r,r,r,r,s.gazX(),!1,r,r,r,r,r,r,A.n(A.q("settings_theme_color"),r,r,r,r,r,r,r),r,new A.aO(new A.aIc(s),r),r),B.aP,new A.aO(new A.aId(s),r),B.aP,new A.aO(new A.aIf(s),r),B.aP,new A.aO(new A.aIg(s),r),B.aP,new A.aO(new A.aIh(s),r),B.aP,new A.aO(new A.aIi(s),r)],q),B.l,B.j,B.k,0,B.n),r,r,r,r,r),B.Z,A.cu(A.ay(A.b([A.c6(!1,r,r,r,!0,r,r,r,!0,r,B.Tk,r,r,r,r,new A.aIj(),!1,r,r,r,r,r,r,A.n(A.q("settings_terms"),r,r,r,r,r,r,r),r,B.b5,r),B.aP,A.c6(!1,r,r,r,!0,r,r,r,!0,r,B.T8,r,r,r,r,new A.aIk(),!1,r,r,r,r,r,r,A.n(A.q("settings_privacy"),r,r,r,r,r,r,r),r,B.b5,r),B.aP,A.c6(!1,r,r,r,!0,r,r,r,!0,r,B.SP,r,r,r,r,new A.aIl(a),!1,r,r,r,r,B.aaK,r,A.n(A.q("settings_about"),r,r,r,r,r,r,r),r,r,r)],q),B.l,B.j,B.k,0,B.n),r,r,r,r,r),B.Z,A.cu(A.ay(A.b([A.c6(!1,r,r,r,!0,r,r,r,!0,r,B.Tg,r,r,r,r,new A.aIm(),!1,r,r,r,r,r,r,A.n(A.q("change_pw_title"),r,r,r,r,r,r,r),r,B.b5,r),B.aP,A.c6(!1,r,r,r,!0,r,r,r,!0,r,A.bg(B.RT,A.l(a).ax.fy,r,r),r,r,r,r,new A.aIe(s),!1,r,r,r,r,r,r,A.n(A.q("delete_account_title"),r,r,r,A.dp(r,r,A.l(a).ax.fy,r,r,r,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r,r),r,r,r)],q),B.l,B.j,B.k,0,B.n),r,r,r,r,r)],q),B.a5,r,B.N,!1),r,r,r,r)}}
+return A.cM(A.d9(r,r,r,!0,!0,r,r,1,r,r,r,!1,r,!1,r,r,r,r,!0,r,r,r,r,r,A.n(A.q("settings_title"),r,r,r,r,r,r,r),r,r,r,1,r,!0),r,A.eU(A.b([A.cu(A.ay(A.b([new A.aO(new A.aIb(s),r),B.aP,A.c6(!1,r,r,r,!0,r,r,r,!0,r,B.Ti,r,r,r,r,s.gazX(),!1,r,r,r,r,r,r,A.n(A.q("settings_theme_color"),r,r,r,r,r,r,r),r,new A.aO(new A.aIc(s),r),r),B.aP,new A.aO(new A.aId(s),r),B.aP,new A.aO(new A.aIf(s),r),B.aP,new A.aO(new A.aIg(s),r),B.aP,new A.aO(new A.aIh(s),r),B.aP,new A.aO(new A.aIi(s),r)],q),B.l,B.j,B.k,0,B.n),r,r,r,r,r),B.Z,A.cu(A.ay(A.b([A.c6(!1,r,r,r,!0,r,r,r,!0,r,B.Tk,r,r,r,r,new A.aIj(),!1,r,r,r,r,r,r,A.n(A.q("settings_terms"),r,r,r,r,r,r,r),r,B.b5,r),B.aP,A.c6(!1,r,r,r,!0,r,r,r,!0,r,B.T8,r,r,r,r,new A.aIk(),!1,r,r,r,r,r,r,A.n(A.q("settings_privacy"),r,r,r,r,r,r,r),r,B.b5,r),B.aP,A.c6(!1,r,r,r,!0,r,r,r,!0,r,B.SP,r,r,r,r,new A.aIl(a),!1,r,r,r,r,B.aaI,r,A.n(A.q("settings_about"),r,r,r,r,r,r,r),r,r,r)],q),B.l,B.j,B.k,0,B.n),r,r,r,r,r),B.Z,A.cu(A.ay(A.b([A.c6(!1,r,r,r,!0,r,r,r,!0,r,B.Tg,r,r,r,r,new A.aIm(),!1,r,r,r,r,r,r,A.n(A.q("change_pw_title"),r,r,r,r,r,r,r),r,B.b5,r),B.aP,A.c6(!1,r,r,r,!0,r,r,r,!0,r,A.bg(B.RT,A.l(a).ax.fy,r,r),r,r,r,r,new A.aIe(s),!1,r,r,r,r,r,r,A.n(A.q("delete_account_title"),r,r,r,A.dp(r,r,A.l(a).ax.fy,r,r,r,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r,r),r,r,r)],q),B.l,B.j,B.k,0,B.n),r,r,r,r,r)],q),B.a5,r,B.N,!1),r,r,r,r)}}
 A.aIa.prototype={
 $0(){A.dI($.K(),!0,!1,null,null)
 var s=$.f
@@ -120928,7 +120928,7 @@ A.aIk.prototype={
 $0(){},
 $S:0}
 A.aIl.prototype={
-$0(){return A.bA6("Paragon","1.8.0",this.a)},
+$0(){return A.bA6("Paragon","1.9.0",this.a)},
 $S:0}
 A.aIm.prototype={
 $0(){return A.bJ($.K(),"/change-password",null,!0,t.z)},
@@ -131662,9 +131662,9 @@ B.a9y=new A.M(!0,B.r,null,".AppleSystemUIFont",null,null,null,null,null,null,nul
 B.a6F=new A.M(!0,B.r,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.m,null,null,null,"blackRedwoodCity labelSmall",null,null,null,null)
 B.aaE=new A.fv(B.a8r,B.a7n,B.a8s,B.a8U,B.a73,B.a7b,B.a7G,B.a8P,B.a7S,B.a9g,B.a6y,B.a6Q,B.a9d,B.a9y,B.a6F)
 B.aaF=new A.iO("Google",null,null,null,null,null,null,null,null,null)
-B.aaI=new A.iO("flutter_map | \xa9 ",null,null,null,null,null,null,null,null,null)
-B.aaJ=new A.iO("Apple",null,null,null,null,null,null,null,null,null)
-B.aaK=new A.iO("Paragon v1.8.0",null,null,null,null,null,null,null,null,null)
+B.aaI=new A.iO("Paragon v1.9.0",null,null,null,null,null,null,null,null,null)
+B.aaJ=new A.iO("flutter_map | \xa9 ",null,null,null,null,null,null,null,null,null)
+B.aaK=new A.iO("Apple",null,null,null,null,null,null,null,null,null)
 B.aaL=new A.MP(0,"system")
 B.aaM=new A.MP(1,"light")
 B.H5=new A.MP(2,"dark")
